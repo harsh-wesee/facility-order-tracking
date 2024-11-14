@@ -8,7 +8,10 @@ const PORT = 3000;
 const accessToken = process.env.DELHIVERY_TOKEN;
 
 // Enable CORS for development
-app.use(cors());
+app.use(cors({
+    origin: "*",
+    methods: ['GET']
+}));
 
 // Serve static files (HTML, CSS, JS)
 app.use(express.static('public'));

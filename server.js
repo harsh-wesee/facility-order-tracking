@@ -17,6 +17,8 @@ app.use(express.static('public'));
 app.get('/api/track/:awb', async (req, res) => {
     console.log(req.params.awb);
     const awbNumber = req.params.awb;
+    console.log(awbNumber);
+    // facility-order-tracking-c6vgh2265-harshs-projects-eceafdcd.vercel.app
     const url = `https://track.delhivery.com/api/v1/packages/json/?waybill=${awbNumber}`;
 
     try {

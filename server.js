@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.static('public'));
 
 // Endpoint to fetch order details
-app.get('/api/track/:awb', async (req, res) => {
+app.get('/api/track/:awb', cors(), async (req, res) => {
     console.log(req.params.awb);
     const awbNumber = req.params.awb;
     console.log(awbNumber);

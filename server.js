@@ -32,6 +32,7 @@ app.get('/api/track/:awb', cors(), async (req, res) => {
             },
         });
         console.log("first")
+        condole.log("the second part is also solved.....Please check")
         res.json(response.data);
     } catch (error) {
         res.status(500).json({ error: 'Error fetching data from Delhivery API' });
